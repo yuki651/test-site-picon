@@ -110,3 +110,29 @@
   .gallery-feature-grid .photo-slide img{height:260px}
   .gallery-feature-grid .gallery-photo{height:320px}
 }
+
+
+/* Hero illustration: replace test-tube-like drinks with stemmed wine glasses */
+.hero-art .drink{
+  width:112px;height:172px;bottom:54px;
+  border:0;border-radius:0;
+  background:rgba(255,255,255,.76);
+  clip-path:polygon(5% 0,95% 0,88% 28%,77% 48%,62% 61%,55% 65%,55% 88%,78% 88%,86% 94%,86% 98%,14% 98%,14% 94%,22% 88%,45% 88%,45% 65%,38% 61%,23% 48%,12% 28%);
+  box-shadow:0 20px 50px #0005;
+  transform:rotate(-7deg);
+}
+.hero-art .drink:before{
+  content:"";position:absolute;left:9%;top:3%;width:82%;height:57%;
+  border:3px solid #ffffffdc;border-radius:10px 10px 48% 48%;
+  background:transparent;
+}
+.hero-art .drink span{
+  position:absolute;left:15%;right:15%;top:28%;bottom:37%;
+  inset:28% 15% 37%;border-radius:0 0 45% 45%;
+  background:linear-gradient(180deg,#37e5ffb8,#1b7df4e8);
+  clip-path:polygon(0 0,100% 0,90% 55%,65% 82%,50% 90%,35% 82%,10% 55%);
+}
+.hero-art .drink-blue{left:23%;height:190px;width:112px;transform:rotate(-7deg)}
+.hero-art .drink-pink{right:18%;height:166px;width:100px;transform:rotate(7deg)}
+.hero-art .drink-pink span{background:linear-gradient(180deg,#ff92c7dd,#f52e8cf0)}
+@media(max-width:560px){.hero-art .drink-blue{left:18%}.hero-art .drink-pink{right:16%}}
