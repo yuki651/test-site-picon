@@ -27,3 +27,11 @@ GitHubの画面表示は更新される場合があります。公開リポジ�
 
 ## 注意
 この試作品にはバックエンドや予約フォームはありません。外部サービスのアカウント、ドメイン、予約・決済機能などが必要な場合は別途設定が必要です。Google Fontsを読み込むため、ネット接続があると指定フォントが使われます。
+
+
+## 公式SNSリンク
+- X: https://x.com/PiconTokyo
+- Instagram: https://www.instagram.com/picon2020.tokyo/
+- Facebook: https://www.facebook.com/profile.php?id=61550624521921
+
+SNSリンクは公開されている店舗アカウント情報をもとに設定しています。公開前に各リンク先が現在も公式アカウントであることをご確認ください。
