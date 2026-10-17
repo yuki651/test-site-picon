@@ -142,14 +142,37 @@
       <div class="section-heading">
         <p class="eyebrow">OUR PLACE</p>
         <h2>店内・スタッフ <span>📸</span></h2>
-        <p class="section-lead">店内やスタッフの写真は、準備ができたらここに掲載します。</p>
+        <p class="section-lead">写真を切り替えて、ピコンの雰囲気をご覧いただけます。</p>
       </div>
-      <div class="gallery-grid">
-        <div class="gallery-placeholder gallery-one"><span>PHOTO 01</span><strong>店内の写真</strong></div>
-        <div class="gallery-placeholder gallery-two"><span>PHOTO 02</span><strong>スタッフの写真</strong></div>
-        <div class="gallery-placeholder gallery-three"><span>PHOTO 03</span><strong>ドリンク・フード</strong></div>
+      <div class="gallery-feature-grid">
+      <div class="photo-slider" aria-label="MixBarピコンの写真スライドショー">
+        <div class="photo-slide is-active" data-slide="0" aria-hidden="false">
+          <img src="https://picon.tokyo/cmn/img/shop14.jpg" alt="MIX BARピコンの店内" loading="lazy">
+          <div class="photo-slide-caption">店内の雰囲気</div>
+        </div>
+        <div class="photo-slide" data-slide="1" aria-hidden="true" hidden>
+          <img src="https://www.suntory.co.jp/shop_img/l/S000012558_l2.jpg" alt="MIX BARピコンの店内写真" loading="lazy">
+          <div class="photo-slide-caption">店内写真</div>
+        </div>
+        <div class="photo-slider-controls">
+          <button class="photo-slider-arrow" type="button" data-direction="prev" aria-label="前の写真">‹ 前へ</button>
+          <div class="photo-slider-dots" aria-label="写真を選択">
+            <button class="photo-slider-dot is-active" type="button" data-go="0" aria-label="1枚目の写真を表示" aria-pressed="true"></button>
+            <button class="photo-slider-dot" type="button" data-go="1" aria-label="2枚目の写真を表示" aria-pressed="false"></button>
+          </div>
+          <span class="photo-slider-count" aria-live="polite">1 / 2</span>
+          <button class="photo-slider-arrow" type="button" data-direction="next" aria-label="次の写真">次へ ›</button>
+        </div>
       </div>
-      <p class="small-print centered">※ 写真は後日差し替え予定です。</p>
+      <div class="gallery-grid gallery-staff-grid">
+        <article class="gallery-card gallery-staff-card">
+          <img class="gallery-photo" src="https://picon.tokyo/cmn/img/staff-01.jpg" alt="MIX BARピコンのママ 愛羽サキさん" loading="lazy">
+          <div class="gallery-caption"><strong>愛羽サキ</strong><span>ピコンのママ</span></div>
+        </article>
+      </div>
+
+      </div>
+      <p class="small-print centered">写真は各掲載元の画像を読み込んで表示しています。掲載元で画像が移動・削除された場合、表示されなくなることがあります。</p>
     </section>
 
     <section class="instagram-section" id="instagram">
