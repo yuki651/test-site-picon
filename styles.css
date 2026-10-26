@@ -679,6 +679,11 @@ h1 span {
   font-size:1.7rem
 }
 
+.social-youtube .social-symbol {
+  color:#ff3333;
+  font-size:1.25rem
+}
+
 .button-light {
   background:white;
   color:#6d2eac;
