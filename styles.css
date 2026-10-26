@@ -1651,7 +1651,7 @@ h1 span {
 }
 
 
-/* 15. お問い合わせフォーム */
+/* 15. お問い合わせ（Googleフォームへのリンク） */
 .contact-section {
   background:linear-gradient(180deg,#fffaff 0%,#f5f0ff 100%);
 }
@@ -1714,3 +1714,10 @@ h1 span {
   .contact-form {border-radius:18px}
   .contact-submit {width:100%}
 }
+
+
+/* Googleフォームリンク */
+.contact-link-card {text-align:center}
+.contact-link-card > p:first-child {margin:0 0 22px}
+.contact-link-button {text-decoration:none;max-width:440px}
+.contact-link-button[aria-disabled="true"] {opacity:.82}

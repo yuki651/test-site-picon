@@ -237,39 +237,14 @@
       <div class="section-heading">
         <p class="eyebrow">CONTACT</p>
         <h2>お問い合わせ</h2>
-        <p class="section-lead">ご質問などがございましたら、こちらのフォームからお気軽にお問い合わせください。</p>
+        <p class="section-lead">ご質問などがございましたら、Googleフォームからお気軽にお問い合わせください。</p>
       </div>
-      <form class="contact-form" action="https://formsubmit.co/info@picon.tokyo" method="POST">
-        <input type="hidden" name="_subject" value="【MIX BARピコン】Webサイトからのお問い合わせ">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <div class="contact-form-grid">
-          <div class="form-field">
-            <label for="contact-name">お名前 <span class="required-label">必須</span></label>
-            <input id="contact-name" name="お名前" type="text" autocomplete="name" maxlength="100" required>
-          </div>
-          <div class="form-field">
-            <label for="contact-email">メールアドレス <span class="required-label">必須</span></label>
-            <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
-          </div>
-          <div class="form-field form-field-full">
-            <label for="contact-category">お問い合わせ種別</label>
-            <select id="contact-category" name="お問い合わせ種別">
-              <option value="ご利用・料金について">ご利用・料金について</option>
-              <option value="営業時間・アクセスについて">営業時間・アクセスについて</option>
-              <option value="イベントについて">イベントについて</option>
-              <option value="その他">その他</option>
-            </select>
-          </div>
-          <div class="form-field form-field-full">
-            <label for="contact-message">お問い合わせ内容 <span class="required-label">必須</span></label>
-            <textarea id="contact-message" name="お問い合わせ内容" rows="6" maxlength="5000" required></textarea>
-          </div>
-        </div>
-        <label class="privacy-consent"><input type="checkbox" required> <span>お問い合わせへの返信・対応のため、入力した情報が利用されることに同意します。</span></label>
-        <p class="contact-note">※返信にはお時間をいただく場合があります。お急ぎの場合はお電話でお問い合わせください。<br>※個人情報やカード情報など、機微な情報は入力しないでください。</p>
-        <button class="button button-gradient contact-submit" type="submit">内容を送信する <span aria-hidden="true">→</span></button>
-      </form>
+      <div class="contact-form contact-link-card">
+        <p>お問い合わせ内容を入力して送信してください。</p>
+        <!-- Googleフォームを作成したら、下の href="#" をフォームのURLに変更してください。 -->
+        <a class="button button-gradient contact-submit contact-link-button" href="#" aria-disabled="true" onclick="event.preventDefault(); alert('GoogleフォームのURL設定後にご利用いただけます。');">Googleフォームでお問い合わせ <span aria-hidden="true">→</span></a>
+        <p class="contact-note">※GoogleフォームのURLは、フォーム作成後に設定します。<br>※個人情報やカード情報など、機微な情報は入力しないでください。</p>
+      </div>
     </section>
 
     <section class="instagram-section" id="instagram">
