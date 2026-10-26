@@ -1184,14 +1184,18 @@ h1 span {
   flex-shrink:0;
 }
 
+/* スタッフが複数名でも、店内写真と同じ高さの枠内に収める */
 .gallery-feature-grid .gallery-staff-grid {
   grid-template-columns:minmax(0,1fr);
+  grid-template-rows:repeat(2,minmax(0,1fr));
   align-content:stretch;
+  gap:12px;
   margin:0;
 }
 
 .gallery-feature-grid .gallery-staff-card {
-  height:380px;
+  min-height:0;
+  height:auto;
   display:flex;
   flex-direction:column;
 }
@@ -1235,8 +1239,13 @@ h1 span {
   }
 
   .gallery-feature-grid .gallery-staff-grid {
-    grid-template-columns:minmax(0,360px);
-    justify-content:center
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    grid-template-rows:auto;
+    justify-content:center;
+    gap:12px;
+    max-width:520px;
+    width:100%;
+    margin:0 auto;
   }
 
   .gallery-feature-grid .gallery-staff-card {
@@ -1244,7 +1253,7 @@ h1 span {
   }
 
   .gallery-feature-grid .gallery-photo {
-    height:300px;
+    height:240px;
     flex:none
   }
 }
@@ -1259,7 +1268,7 @@ h1 span {
   }
 
   .gallery-feature-grid .gallery-photo {
-    height:320px
+    height:220px
   }
 }
 
@@ -1327,5 +1336,160 @@ h1 span {
 
   .hero-art .drink-pink {
     right:16%
+  }
+}
+
+
+/* 10. 営業カレンダー：Googleカレンダーの表示サイズ */
+
+.calendar-embed-wrap {
+  width:100%;
+  max-width:1000px;
+  height:600px;
+  margin:0 auto;
+  overflow:hidden;
+  border:1px solid #f3e3f0;
+  border-radius:20px;
+  background:#fff;
+  box-shadow:0 14px 34px #25183f18;
+}
+
+.calendar-embed-wrap iframe {
+  display:block;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+@media(max-width:700px) {
+  .calendar-embed-wrap {
+    height:600px;
+    border-radius:14px;
+  }
+}
+
+@media(max-width:560px) {
+  .calendar-embed-wrap {
+    height:520px;
+    border-radius:12px;
+  }
+}
+
+/* 11. スタッフ紹介：店内写真と同じスライド形式 */
+.staff-slider {
+  width:100%;
+  max-width:420px;
+  height:380px;
+  margin:0 auto;
+  padding:12px;
+  border:1px solid rgba(117, 74, 130, .16);
+  border-radius:20px;
+  background:rgba(255,255,255,.9);
+  box-shadow:0 12px 30px rgba(60, 35, 70, .08);
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  min-width:0;
+}
+
+.staff-slider .staff-slide {
+  flex:1;
+  min-height:0;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  border-radius:14px;
+}
+
+.staff-slider .staff-slide[hidden] {
+  display:none;
+}
+
+.staff-slider .gallery-photo {
+  width:100%;
+  height:0;
+  min-height:0;
+  flex:1;
+  object-fit:contain;
+  background:#fff;
+}
+
+.staff-slider .gallery-caption {
+  flex-shrink:0;
+  padding:10px 12px;
+}
+
+.staff-slider-controls {
+  flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.staff-slider-arrow {
+  border:1px solid rgba(117, 74, 130, .2);
+  border-radius:999px;
+  background:#fff;
+  color:var(--purple, #754a82);
+  padding:8px 12px;
+  font:inherit;
+  font-size:.88rem;
+  cursor:pointer;
+}
+
+.staff-slider-arrow:hover {
+  background:var(--purple, #754a82);
+  color:#fff;
+}
+
+.staff-slider-dots {
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.staff-slider-dot {
+  width:10px;
+  height:10px;
+  padding:0;
+  border:0;
+  border-radius:50%;
+  background:#d8cbdc;
+  cursor:pointer;
+}
+
+.staff-slider-dot.is-active {
+  background:var(--purple, #754a82);
+  transform:scale(1.2);
+}
+
+.staff-slider-count {
+  color:#65566b;
+  font-size:.82rem;
+  white-space:nowrap;
+}
+
+@media(max-width:700px) {
+  .staff-slider {
+    height:360px;
+    max-width:520px;
+  }
+}
+
+@media(max-width:560px) {
+  .staff-slider {
+    height:340px;
+    padding:8px;
+    border-radius:18px;
+  }
+
+  .staff-slider-arrow {
+    padding:8px 10px;
+    font-size:.82rem;
+  }
+
+  .staff-slider-controls {
+    gap:6px;
   }
 }

@@ -47,3 +47,31 @@ document.querySelectorAll(".photo-slider-arrow").forEach((button) => {
 });
 photoDots.forEach((dot) => dot.addEventListener("click", () => showPhoto(Number(dot.dataset.go))));
 showPhoto(0);
+
+
+// Staff introduction slider: switch between staff profiles.
+const staffSlides = Array.from(document.querySelectorAll(".staff-slide"));
+const staffDots = Array.from(document.querySelectorAll(".staff-slider-dot"));
+const staffCount = document.querySelector(".staff-slider-count");
+let currentStaff = 0;
+function showStaff(index) {
+  if (!staffSlides.length) return;
+  currentStaff = (index + staffSlides.length) % staffSlides.length;
+  staffSlides.forEach((slide, i) => {
+    const active = i === currentStaff;
+    slide.hidden = !active;
+    slide.classList.toggle("is-active", active);
+    slide.setAttribute("aria-hidden", String(!active));
+  });
+  staffDots.forEach((dot, i) => {
+    const active = i === currentStaff;
+    dot.classList.toggle("is-active", active);
+    dot.setAttribute("aria-pressed", String(active));
+  });
+  if (staffCount) staffCount.textContent = `${currentStaff + 1} / ${staffSlides.length}`;
+}
+document.querySelectorAll(".staff-slider-arrow").forEach((button) => {
+  button.addEventListener("click", () => showStaff(currentStaff + (button.dataset.staffDirection === "next" ? 1 : -1)));
+});
+staffDots.forEach((dot) => dot.addEventListener("click", () => showStaff(Number(dot.dataset.staffGo))));
+showStaff(0);

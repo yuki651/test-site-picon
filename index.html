@@ -17,6 +17,7 @@
       <a href="#price">料金・システム</a>
       <a href="#access">営業時間・アクセス</a>
       <a href="#gallery">店内・スタッフ</a>
+      <a href="#calendar">営業カレンダー</a>
       <a href="#instagram">各種SNS</a>
     </nav>
   </header>
@@ -164,22 +165,49 @@
           <button class="photo-slider-arrow" type="button" data-direction="next" aria-label="次の写真">次へ ›</button>
         </div>
       </div>
-      <div class="gallery-grid gallery-staff-grid">
-        <article class="gallery-card gallery-staff-card">
+      <div class="staff-slider" aria-label="MIX BARピコンのスタッフ紹介スライドショー">
+        <article class="gallery-card staff-slide is-active" data-staff-slide="0" aria-hidden="false">
           <img class="gallery-photo" src="https://picon.tokyo/cmn/img/staff-01.jpg" alt="MIX BARピコンのママ 愛羽サキさん" loading="lazy">
           <div class="gallery-caption"><strong>愛羽サキ</strong><span>ピコンのママ</span></div>
         </article>
+        <article class="gallery-card staff-slide" data-staff-slide="1" aria-hidden="true" hidden>
+          <img class="gallery-photo" src="https://yuki651.github.io/test-site-picon/img/shuri_chan.png" alt="MIX BARピコンのスタッフ しゅり" loading="lazy">
+          <div class="gallery-caption"><strong>しゅり</strong><span>スタッフ</span></div>
+        </article>
+        <div class="staff-slider-controls">
+          <button class="staff-slider-arrow" type="button" data-staff-direction="prev" aria-label="前のスタッフ">‹ 前へ</button>
+          <div class="staff-slider-dots" aria-label="スタッフを選択">
+            <button class="staff-slider-dot is-active" type="button" data-staff-go="0" aria-label="愛羽サキさんを表示" aria-pressed="true"></button>
+            <button class="staff-slider-dot" type="button" data-staff-go="1" aria-label="しゅりさんを表示" aria-pressed="false"></button>
+          </div>
+          <span class="staff-slider-count" aria-live="polite">1 / 2</span>
+          <button class="staff-slider-arrow" type="button" data-staff-direction="next" aria-label="次のスタッフ">次へ ›</button>
+        </div>
       </div>
 
       </div>
       <p class="small-print centered">写真は各掲載元の画像を読み込んで表示しています。掲載元で画像が移動・削除された場合、表示されなくなることがあります。</p>
     </section>
-    
-    <iframe src="https://calendar.google.com/calendar/embed?src=picon.tokyo%40gmail.com&ctz=Asia%2FTokyo" style="border: 0"
-        width="800"
-        height="600"
-        frameborder="0"
-        scrolling="no"></iframe>
+
+    <!-- 営業カレンダー：Googleカレンダーを表示 -->
+    <section class="section calendar-section" id="calendar">
+      <div class="section-heading">
+        <p class="eyebrow">BUSINESS CALENDAR</p>
+        <h2>営業カレンダー <span>📅</span></h2>
+        <p class="section-lead">営業日やイベント予定はこちらからご確認ください。</p>
+      </div>
+      <div class="calendar-embed-wrap">
+        <iframe
+          src="https://calendar.google.com/calendar/embed?src=picon.tokyo%40gmail.com&amp;ctz=Asia%2FTokyo"
+          title="MIX BARピコン 営業カレンダー"
+          loading="lazy"
+          frameborder="0"
+          scrolling="no"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <p class="small-print centered">カレンダーが表示されない場合は、公開設定をご確認ください。</p>
+    </section>
 
     <section class="instagram-section" id="instagram">
       <div class="instagram-icon" aria-hidden="true">◎</div>
@@ -198,7 +226,7 @@
     <p>性別を問わず、誰でも楽しめるミックスバー。</p>
     <p>〒160-0021 東京都新宿区歌舞伎町2-42-16 第二大滝ビル 4F 4B号室</p>
     <p><a href="tel:0363881639">03-6388-1639</a> ・ <a href="https://picon.tokyo/" target="_blank" rel="noopener noreferrer">公式サイト</a></p>
-    <div class="footer-links"><a href="#price">料金</a><a href="#access">アクセス</a><a href="#gallery">店内・スタッフ</a><a href="#instagram">各種SNS</a></div>
+    <div class="footer-links"><a href="#price">料金</a><a href="#access">アクセス</a><a href="#gallery">店内・スタッフ</a><a href="#calendar">営業カレンダー</a><a href="#instagram">各種SNS</a></div>
     <small>© <span id="year"></span> MixBarピコン</small>
   </footer>
   <script src="script.js"></script>
