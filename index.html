@@ -18,6 +18,7 @@
       <a href="#access">営業時間・アクセス</a>
       <a href="#gallery">店内・スタッフ</a>
       <a href="#calendar">営業カレンダー</a>
+      <a href="#contact">お問い合わせ</a>
       <a href="#instagram">各種SNS</a>
     </nav>
   </header>
@@ -232,13 +233,52 @@
       <p class="small-print centered">カレンダーが表示されない場合は、公開設定をご確認ください。</p>
     </section>
 
+    <section class="section contact-section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">CONTACT</p>
+        <h2>お問い合わせ</h2>
+        <p class="section-lead">ご質問などがございましたら、こちらのフォームからお気軽にお問い合わせください。</p>
+      </div>
+      <form class="contact-form" action="https://formsubmit.co/info@picon.tokyo" method="POST">
+        <input type="hidden" name="_subject" value="【MIX BARピコン】Webサイトからのお問い合わせ">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <div class="contact-form-grid">
+          <div class="form-field">
+            <label for="contact-name">お名前 <span class="required-label">必須</span></label>
+            <input id="contact-name" name="お名前" type="text" autocomplete="name" maxlength="100" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-email">メールアドレス <span class="required-label">必須</span></label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required>
+          </div>
+          <div class="form-field form-field-full">
+            <label for="contact-category">お問い合わせ種別</label>
+            <select id="contact-category" name="お問い合わせ種別">
+              <option value="ご利用・料金について">ご利用・料金について</option>
+              <option value="営業時間・アクセスについて">営業時間・アクセスについて</option>
+              <option value="イベントについて">イベントについて</option>
+              <option value="その他">その他</option>
+            </select>
+          </div>
+          <div class="form-field form-field-full">
+            <label for="contact-message">お問い合わせ内容 <span class="required-label">必須</span></label>
+            <textarea id="contact-message" name="お問い合わせ内容" rows="6" maxlength="5000" required></textarea>
+          </div>
+        </div>
+        <label class="privacy-consent"><input type="checkbox" required> <span>お問い合わせへの返信・対応のため、入力した情報が利用されることに同意します。</span></label>
+        <p class="contact-note">※返信にはお時間をいただく場合があります。お急ぎの場合はお電話でお問い合わせください。<br>※個人情報やカード情報など、機微な情報は入力しないでください。</p>
+        <button class="button button-gradient contact-submit" type="submit">内容を送信する <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
     <section class="instagram-section" id="instagram">
       <div class="instagram-icon" aria-hidden="true">◎</div>
       <div class="social-copy"><p class="eyebrow">FOLLOW OUR SOCIALS</p><h2>最新情報は各種SNSで！</h2><p>営業情報やイベント、お店の日常をお届けします。</p></div>
       <div class="social-buttons" aria-label="公式SNSリンク">
         <a class="social-button social-x" href="https://x.com/PiconTokyo" target="_blank" rel="noopener noreferrer" aria-label="X公式アカウントを開く"><span class="social-symbol" aria-hidden="true">𝕏</span><span>X</span><span aria-hidden="true">↗</span></a>
         <a class="social-button social-instagram" href="https://www.instagram.com/picon2020.tokyo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram公式アカウントを開く"><span class="social-symbol" aria-hidden="true">◎</span><span>Instagram</span><span aria-hidden="true">↗</span></a>
-        <a class="social-button social-facebook" href="https://www.facebook.com/profile.php?id=61591870576593" target="_blank" rel="noopener noreferrer" aria-label="Facebook公式ページを開く"><span class="social-symbol" aria-hidden="true">f</span><span>Facebook</span><span aria-hidden="true">↗</span></a>
+        <a class="social-button social-facebook" href="https://www.facebook.com/profile.php?id=61550624521921" target="_blank" rel="noopener noreferrer" aria-label="Facebook公式ページを開く"><span class="social-symbol" aria-hidden="true">f</span><span>Facebook</span><span aria-hidden="true">↗</span></a>
         <a class="social-button social-youtube" href="https://www.youtube.com/@barpicon-shinjuku/streams" target="_blank" rel="noopener noreferrer" aria-label="YouTube公式チャンネルを開く"><span class="social-symbol" aria-hidden="true">▶</span><span>YouTube</span><span aria-hidden="true">↗</span></a>
       </div>
       <p class="small-print">各ボタンからMIX BARピコンの公式SNSを開けます。</p>
@@ -250,7 +290,7 @@
     <p>性別を問わず、誰でも楽しめるミックスバー。</p>
     <p>〒160-0021 東京都新宿区歌舞伎町2-42-16 第二大滝ビル 4F 4B号室</p>
     <p><a href="tel:0363881639">03-6388-1639</a> ・ <a href="https://picon.tokyo/" target="_blank" rel="noopener noreferrer">公式サイト</a></p>
-    <div class="footer-links"><a href="#price">料金</a><a href="#access">アクセス</a><a href="#gallery">店内・スタッフ</a><a href="#calendar">営業カレンダー</a><a href="#instagram">各種SNS</a></div>
+    <div class="footer-links"><a href="#price">料金</a><a href="#access">アクセス</a><a href="#gallery">店内・スタッフ</a><a href="#calendar">営業カレンダー</a><a href="#contact">お問い合わせ</a><a href="#instagram">各種SNS</a></div>
     <small>© <span id="year"></span> MixBarピコン</small>
   </footer>
   <div class="map-lightbox" id="map-lightbox" role="dialog" aria-modal="true" aria-label="案内図の拡大表示" hidden>
