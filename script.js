@@ -75,3 +75,31 @@ document.querySelectorAll(".staff-slider-arrow").forEach((button) => {
 });
 staffDots.forEach((dot) => dot.addEventListener("click", () => showStaff(Number(dot.dataset.staffGo))));
 showStaff(0);
+
+
+// Open the access map in a large overlay when tapped or clicked.
+const mapZoomButton = document.querySelector(".hours-map-zoom-button");
+const mapLightbox = document.querySelector("#map-lightbox");
+const mapLightboxClose = document.querySelector(".map-lightbox-close");
+let mapZoomPreviousFocus = null;
+function closeMapLightbox() {
+  if (!mapLightbox || mapLightbox.hidden) return;
+  mapLightbox.hidden = true;
+  document.body.style.overflow = "";
+  if (mapZoomPreviousFocus) mapZoomPreviousFocus.focus();
+}
+if (mapZoomButton && mapLightbox && mapLightboxClose) {
+  mapZoomButton.addEventListener("click", () => {
+    mapZoomPreviousFocus = document.activeElement;
+    mapLightbox.hidden = false;
+    document.body.style.overflow = "hidden";
+    mapLightboxClose.focus();
+  });
+  mapLightboxClose.addEventListener("click", closeMapLightbox);
+  mapLightbox.addEventListener("click", (event) => {
+    if (event.target === mapLightbox) closeMapLightbox();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMapLightbox();
+  });
+}

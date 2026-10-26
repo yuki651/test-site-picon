@@ -1523,3 +1523,124 @@ h1 span {
     min-height: 300px;
   }
 }
+
+/* 11. 営業時間カードの空きスペースに公式案内図を表示 */
+.hours-map-image-wrap {
+  margin-top: 22px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #f3d7e8;
+}
+
+.hours-map-image-wrap img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 330px;
+  object-fit: contain;
+}
+
+@media (max-width: 700px) {
+  .hours-map-image-wrap {
+    margin-top: 18px;
+  }
+
+  .hours-map-image-wrap img {
+    max-height: none;
+  }
+}
+
+
+
+/* 12. 営業時間欄の案内図をクリック／タップで拡大表示 */
+.hours-map-zoom-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+  color: inherit;
+  font: inherit;
+}
+
+.hours-map-zoom-button img {
+  transition: opacity 0.2s ease;
+}
+
+.hours-map-zoom-button:hover img,
+.hours-map-zoom-button:focus-visible img {
+  opacity: 0.88;
+}
+
+.hours-map-zoom-button:focus-visible {
+  outline: 3px solid #d84a9b;
+  outline-offset: 3px;
+}
+
+.hours-map-zoom-hint {
+  display: block;
+  padding: 8px 10px;
+  color: #8b426d;
+  background: #fff5fb;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.map-lightbox[hidden] {
+  display: none !important;
+}
+
+.map-lightbox {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 20px 20px;
+  background: rgba(20, 12, 22, 0.88);
+  cursor: zoom-out;
+}
+
+.map-lightbox img {
+  display: block;
+  max-width: min(100%, 1200px);
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  cursor: default;
+  border-radius: 8px;
+  box-shadow: 0 8px 36px rgba(0, 0, 0, 0.35);
+}
+
+.map-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .map-lightbox {
+    padding: 60px 10px 12px;
+  }
+
+  .map-lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

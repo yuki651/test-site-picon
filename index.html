@@ -134,7 +134,14 @@
         <h2>営業時間・アクセス <span>📍</span></h2>
       </div>
       <div class="access-grid">
-        <article class="info-card hours-card"><div class="card-icon">◷</div><h3>営業時間</h3><p class="big-placeholder">20:00〜翌4:00頃</p><p>定休日：毎週日曜日（祝日は営業）</p><p class="small-print">※ 営業時間は変更になる場合があります。ご来店前に公式サイトで最新情報をご確認ください。</p><p><a href="tel:0363881639">電話：03-6388-1639</a></p></article>
+        <article class="info-card hours-card"><div class="card-icon">◷</div><h3>営業時間</h3><p class="big-placeholder">20:00〜翌4:00頃</p><p>定休日：毎週日曜日（祝日は営業）</p><p class="small-print">※ 営業時間は変更になる場合があります。ご来店前に公式サイトで最新情報をご確認ください。</p><p><a href="tel:0363881639">電話：03-6388-1639</a></p>
+          <div class="hours-map-image-wrap">
+            <button class="hours-map-zoom-button" type="button" aria-label="案内図を拡大表示する" aria-haspopup="dialog">
+              <img src="https://picon.tokyo/cmn/img/map.jpg" alt="MIX BARピコンへの道順・周辺案内図" loading="lazy">
+              <span class="hours-map-zoom-hint">タップ／クリックで拡大</span>
+            </button>
+          </div>
+        </article>
         <article class="info-card map-card">
           <div class="card-icon">⌖</div>
           <h3>お店の場所</h3>
@@ -245,6 +252,10 @@
     <div class="footer-links"><a href="#price">料金</a><a href="#access">アクセス</a><a href="#gallery">店内・スタッフ</a><a href="#calendar">営業カレンダー</a><a href="#instagram">各種SNS</a></div>
     <small>© <span id="year"></span> MixBarピコン</small>
   </footer>
+  <div class="map-lightbox" id="map-lightbox" role="dialog" aria-modal="true" aria-label="案内図の拡大表示" hidden>
+    <button class="map-lightbox-close" type="button" aria-label="拡大表示を閉じる">×</button>
+    <img src="https://picon.tokyo/cmn/img/map.jpg" alt="MIX BARピコンへの道順・周辺案内図（拡大）">
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
