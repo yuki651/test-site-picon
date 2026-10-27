@@ -719,6 +719,13 @@ h1 span {
   color:#e5def5
 }
 
+.footer-language-note {
+  margin: 12px 0 8px !important;
+  color: #a9a1c2 !important;
+  font-size: .68rem;
+  letter-spacing: .04em;
+}
+
 .site-footer small {
   color:#a9a1c2
 }
@@ -1719,5 +1726,7 @@ h1 span {
 /* Googleフォームリンク */
 .contact-link-card {text-align:center}
 .contact-link-card > p:first-child {margin:0 0 22px}
-.contact-link-button {text-decoration:none;max-width:440px}
-.contact-link-button[aria-disabled="true"] {opacity:.82}
+.contact-link-buttons {display:flex;flex-wrap:wrap;justify-content:center;gap:14px}
+.contact-link-button {text-decoration:none;max-width:440px;flex:1 1 280px;margin:0}
+.contact-recruit-button {background:linear-gradient(135deg,#ff8b72 0%,#f5b94c 100%)}
+.contact-link-button:focus-visible {outline:3px solid var(--purple);outline-offset:4px}

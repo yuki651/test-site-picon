@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="ja">
 <head>
+  
+  <!-- 公開時必ず消す -->
+  <meta name="robots" content="noindex"><!-- 公開時必ず消す -->
+  <!-- 公開時必ず消す -->
+  
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="新宿歌舞伎町のMIX BARピコン。性別を問わず誰でも楽しめる、スナック風ミックスバーです。">
@@ -240,10 +245,12 @@
         <p class="section-lead">ご質問などがございましたら、Googleフォームからお気軽にお問い合わせください。</p>
       </div>
       <div class="contact-form contact-link-card">
-        <p>お問い合わせ内容を入力して送信してください。</p>
-        <!-- Googleフォームを作成したら、下の href="#" をフォームのURLに変更してください。 -->
-        <a class="button button-gradient contact-submit contact-link-button" href="#" aria-disabled="true" onclick="event.preventDefault(); alert('GoogleフォームのURL設定後にご利用いただけます。');">Googleフォームでお問い合わせ <span aria-hidden="true">→</span></a>
-        <p class="contact-note">※GoogleフォームのURLは、フォーム作成後に設定します。<br>※個人情報やカード情報など、機微な情報は入力しないでください。</p>
+        <p>お問い合わせ内容に合わせて、下のボタンをお選びください。</p>
+        <div class="contact-link-buttons">
+          <a class="button button-gradient contact-submit contact-link-button" href="https://forms.gle/mpehcsAdT91oPp1t6" target="_blank" rel="noopener noreferrer">一般のお問い合わせ <span aria-hidden="true">→</span></a>
+          <a class="button button-gradient contact-submit contact-link-button contact-recruit-button" href="https://forms.gle/anBUAeNhhNHsBcoE6" target="_blank" rel="noopener noreferrer">求人募集・応募のお問い合わせ <span aria-hidden="true">→</span></a>
+        </div>
+        <p class="contact-note">※ボタンを押すとGoogleフォームが別のタブで開きます。<br>※個人情報やカード情報など、機微な情報は入力しないでください。</p>
       </div>
     </section>
 
@@ -266,6 +273,7 @@
     <p>〒160-0021 東京都新宿区歌舞伎町2-42-16 第二大滝ビル 4F 4B号室</p>
     <p><a href="tel:0363881639">03-6388-1639</a> ・ <a href="https://picon.tokyo/" target="_blank" rel="noopener noreferrer">公式サイト</a></p>
     <div class="footer-links"><a href="#price">料金</a><a href="#access">アクセス</a><a href="#gallery">店内・スタッフ</a><a href="#calendar">営業カレンダー</a><a href="#contact">お問い合わせ</a><a href="#instagram">各種SNS</a></div>
+    <p class="footer-language-note">Japanese Only</p>
     <small>© <span id="year"></span> MixBarピコン</small>
   </footer>
   <div class="map-lightbox" id="map-lightbox" role="dialog" aria-modal="true" aria-label="案内図の拡大表示" hidden>
